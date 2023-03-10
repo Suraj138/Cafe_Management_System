@@ -5,11 +5,20 @@
  */
 package Cafe_Management_System;
 
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.awt.Color;
+import java.text.SimpleDateFormat;
+import java.util.Random;
 /**
  *
  * @author owner
  */
 public class Cafe_Management_System extends javax.swing.JFrame {
+double [] drink = new double[11];
+double [] cake = new double[7];
+String [] cost = new String[3];
+double [] i = new double[10];
 
     /**
      * Creates new form Cafe_Management_System
@@ -28,71 +37,73 @@ public class Cafe_Management_System extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        jTextField1 = new javax.swing.JTextField();
-        jCheckBox11 = new javax.swing.JCheckBox();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
-        jCheckBox13 = new javax.swing.JCheckBox();
-        jCheckBox14 = new javax.swing.JCheckBox();
-        jCheckBox15 = new javax.swing.JCheckBox();
-        jCheckBox16 = new javax.swing.JCheckBox();
-        jTextField19 = new javax.swing.JTextField();
-        jTextField20 = new javax.swing.JTextField();
-        jTextField21 = new javax.swing.JTextField();
-        jTextField22 = new javax.swing.JTextField();
+        jlblCappuccino = new javax.swing.JCheckBox();
+        jlblIcedCappuccino = new javax.swing.JCheckBox();
+        jlblLattle = new javax.swing.JCheckBox();
+        jlblIcedLattle = new javax.swing.JCheckBox();
+        jlblTea = new javax.swing.JCheckBox();
+        jtxtCappuccino = new javax.swing.JTextField();
+        jlblMilkShake = new javax.swing.JCheckBox();
+        jtxtLattle = new javax.swing.JTextField();
+        jtxtIcedCappuccino = new javax.swing.JTextField();
+        jtxtCoffee = new javax.swing.JTextField();
+        jtxtLemonTea = new javax.swing.JTextField();
+        jtxtIcedLattle = new javax.swing.JTextField();
+        jlblSoftDrink = new javax.swing.JCheckBox();
+        jlblBananaShake = new javax.swing.JCheckBox();
+        jlblFruitJuice = new javax.swing.JCheckBox();
+        jlblCoffee = new javax.swing.JCheckBox();
+        jtxtMilkShake = new javax.swing.JTextField();
+        jtxtFruitJuice = new javax.swing.JTextField();
+        jtxtSoftDrink = new javax.swing.JTextField();
+        jtxtBananaShake = new javax.swing.JTextField();
+        jlblLemonTea = new javax.swing.JCheckBox();
+        jtxtTea = new javax.swing.JTextField();
         Cafe_Management_System = new javax.swing.JInternalFrame();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jCheckBox6 = new javax.swing.JCheckBox();
-        jCheckBox7 = new javax.swing.JCheckBox();
-        jCheckBox8 = new javax.swing.JCheckBox();
-        jCheckBox9 = new javax.swing.JCheckBox();
-        jCheckBox10 = new javax.swing.JCheckBox();
-        jTextField13 = new javax.swing.JTextField();
-        jTextField14 = new javax.swing.JTextField();
-        jTextField15 = new javax.swing.JTextField();
-        jTextField16 = new javax.swing.JTextField();
-        jTextField17 = new javax.swing.JTextField();
-        jTextField18 = new javax.swing.JTextField();
-        jCheckBox12 = new javax.swing.JCheckBox();
-        jCheckBox17 = new javax.swing.JCheckBox();
-        jTextField23 = new javax.swing.JTextField();
+        jlblCoffeeCake = new javax.swing.JCheckBox();
+        jlblRedVelvetCake = new javax.swing.JCheckBox();
+        jlblBlackForestCake = new javax.swing.JCheckBox();
+        jlblButterCake = new javax.swing.JCheckBox();
+        jlblAngelFoodCake = new javax.swing.JCheckBox();
+        jtxtRedVelvetCake = new javax.swing.JTextField();
+        jtxtCoffeeCake = new javax.swing.JTextField();
+        jtxtBlackForestCake = new javax.swing.JTextField();
+        jtxtChiffonCake = new javax.swing.JTextField();
+        jtxtButterCake = new javax.swing.JTextField();
+        jtxtAngelFoodCake = new javax.swing.JTextField();
+        jlblHazelnutMousse = new javax.swing.JCheckBox();
+        jlblChiffonCake = new javax.swing.JCheckBox();
+        jtxtHazelnutMousse = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jtxtReceipt = new javax.swing.JTextArea();
         jPanel5 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel14 = new javax.swing.JLabel();
-        jTextField24 = new javax.swing.JTextField();
+        jlblCostofDrink = new javax.swing.JLabel();
+        jlblCostofCake = new javax.swing.JLabel();
+        jlblService = new javax.swing.JLabel();
+        jtxtCostofCakes = new javax.swing.JTextField();
+        jtxtService = new javax.swing.JTextField();
+        jtxtCostofDrinks = new javax.swing.JTextField();
+        jlblGST = new javax.swing.JLabel();
+        jtxtGST = new javax.swing.JTextField();
         jPanel6 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        jBtnTotal = new javax.swing.JButton();
+        jBtnReceipt = new javax.swing.JButton();
+        jBtnReset = new javax.swing.JButton();
+        jBtnExit = new javax.swing.JButton();
+        jBtnPrint = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
+        jlblTax = new javax.swing.JLabel();
+        jlblSubTotal = new javax.swing.JLabel();
+        jlblTotal = new javax.swing.JLabel();
+        jtxtSubTotal = new javax.swing.JTextField();
+        jtxtTax = new javax.swing.JTextField();
+        jtxtTotal = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -106,123 +117,235 @@ public class Cafe_Management_System extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.black, java.awt.Color.lightGray, java.awt.Color.red));
         jPanel1.setToolTipText("");
 
-        jCheckBox1.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
-        jCheckBox1.setText("Cappuccino");
-
-        jCheckBox2.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
-        jCheckBox2.setText("Iced Cappuccino");
-        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+        jlblCappuccino.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        jlblCappuccino.setText("Cappuccino");
+        jlblCappuccino.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlblCappuccinoMouseClicked(evt);
+            }
+        });
+        jlblCappuccino.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox2ActionPerformed(evt);
+                jlblCappuccinoActionPerformed(evt);
             }
         });
 
-        jCheckBox3.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
-        jCheckBox3.setText("Lattle");
-
-        jCheckBox4.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
-        jCheckBox4.setText("Iced Lattle");
-
-        jCheckBox5.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
-        jCheckBox5.setText("Tea");
-
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jlblIcedCappuccino.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        jlblIcedCappuccino.setText("Iced Cappuccino");
+        jlblIcedCappuccino.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlblIcedCappuccinoMouseClicked(evt);
+            }
+        });
+        jlblIcedCappuccino.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jlblIcedCappuccinoActionPerformed(evt);
             }
         });
 
-        jCheckBox11.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
-        jCheckBox11.setText("Milk Shake");
-        jCheckBox11.addActionListener(new java.awt.event.ActionListener() {
+        jlblLattle.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        jlblLattle.setText("Lattle");
+        jlblLattle.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlblLattleMouseClicked(evt);
+            }
+        });
+        jlblLattle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox11ActionPerformed(evt);
+                jlblLattleActionPerformed(evt);
             }
         });
 
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+        jlblIcedLattle.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        jlblIcedLattle.setText("Iced Lattle");
+        jlblIcedLattle.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlblIcedLattleMouseClicked(evt);
+            }
+        });
+        jlblIcedLattle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
+                jlblIcedLattleActionPerformed(evt);
             }
         });
 
-        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+        jlblTea.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        jlblTea.setText("Tea");
+        jlblTea.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlblTeaMouseClicked(evt);
+            }
+        });
+        jlblTea.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField9ActionPerformed(evt);
+                jlblTeaActionPerformed(evt);
             }
         });
 
-        jTextField10.addActionListener(new java.awt.event.ActionListener() {
+        jtxtCappuccino.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtCappuccino.setText("0");
+        jtxtCappuccino.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField10ActionPerformed(evt);
+                jtxtCappuccinoActionPerformed(evt);
             }
         });
 
-        jTextField11.addActionListener(new java.awt.event.ActionListener() {
+        jlblMilkShake.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        jlblMilkShake.setText("Milk Shake");
+        jlblMilkShake.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlblMilkShakeMouseClicked(evt);
+            }
+        });
+        jlblMilkShake.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField11ActionPerformed(evt);
+                jlblMilkShakeActionPerformed(evt);
             }
         });
 
-        jTextField12.addActionListener(new java.awt.event.ActionListener() {
+        jtxtLattle.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtLattle.setText("0");
+        jtxtLattle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField12ActionPerformed(evt);
+                jtxtLattleActionPerformed(evt);
             }
         });
 
-        jCheckBox13.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
-        jCheckBox13.setText("Soft Drink");
-        jCheckBox13.addActionListener(new java.awt.event.ActionListener() {
+        jtxtIcedCappuccino.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtIcedCappuccino.setText("0");
+        jtxtIcedCappuccino.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox13ActionPerformed(evt);
+                jtxtIcedCappuccinoActionPerformed(evt);
             }
         });
 
-        jCheckBox14.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
-        jCheckBox14.setText("Banana Shake");
-        jCheckBox14.addActionListener(new java.awt.event.ActionListener() {
+        jtxtCoffee.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtCoffee.setText("0");
+        jtxtCoffee.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox14ActionPerformed(evt);
+                jtxtCoffeeActionPerformed(evt);
             }
         });
 
-        jCheckBox15.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
-        jCheckBox15.setText("Fruit Juice");
-        jCheckBox15.addActionListener(new java.awt.event.ActionListener() {
+        jtxtLemonTea.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtLemonTea.setText("0");
+        jtxtLemonTea.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox15ActionPerformed(evt);
+                jtxtLemonTeaActionPerformed(evt);
             }
         });
 
-        jCheckBox16.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
-        jCheckBox16.setText("Lemon Tea");
-        jCheckBox16.addActionListener(new java.awt.event.ActionListener() {
+        jtxtIcedLattle.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtIcedLattle.setText("0");
+        jtxtIcedLattle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox16ActionPerformed(evt);
+                jtxtIcedLattleActionPerformed(evt);
             }
         });
 
-        jTextField19.addActionListener(new java.awt.event.ActionListener() {
+        jlblSoftDrink.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        jlblSoftDrink.setText("Soft Drink");
+        jlblSoftDrink.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlblSoftDrinkMouseClicked(evt);
+            }
+        });
+        jlblSoftDrink.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField19ActionPerformed(evt);
+                jlblSoftDrinkActionPerformed(evt);
             }
         });
 
-        jTextField20.addActionListener(new java.awt.event.ActionListener() {
+        jlblBananaShake.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        jlblBananaShake.setText("Banana Shake");
+        jlblBananaShake.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlblBananaShakeMouseClicked(evt);
+            }
+        });
+        jlblBananaShake.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField20ActionPerformed(evt);
+                jlblBananaShakeActionPerformed(evt);
             }
         });
 
-        jTextField21.addActionListener(new java.awt.event.ActionListener() {
+        jlblFruitJuice.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        jlblFruitJuice.setText("Fruit Juice");
+        jlblFruitJuice.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlblFruitJuiceMouseClicked(evt);
+            }
+        });
+        jlblFruitJuice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField21ActionPerformed(evt);
+                jlblFruitJuiceActionPerformed(evt);
             }
         });
 
-        jTextField22.addActionListener(new java.awt.event.ActionListener() {
+        jlblCoffee.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        jlblCoffee.setText("Coffee");
+        jlblCoffee.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlblCoffeeMouseClicked(evt);
+            }
+        });
+        jlblCoffee.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField22ActionPerformed(evt);
+                jlblCoffeeActionPerformed(evt);
+            }
+        });
+
+        jtxtMilkShake.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtMilkShake.setText("0");
+        jtxtMilkShake.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtxtMilkShakeActionPerformed(evt);
+            }
+        });
+
+        jtxtFruitJuice.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtFruitJuice.setText("0");
+        jtxtFruitJuice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtxtFruitJuiceActionPerformed(evt);
+            }
+        });
+
+        jtxtSoftDrink.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtSoftDrink.setText("0");
+        jtxtSoftDrink.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtxtSoftDrinkActionPerformed(evt);
+            }
+        });
+
+        jtxtBananaShake.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtBananaShake.setText("0");
+        jtxtBananaShake.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtxtBananaShakeActionPerformed(evt);
+            }
+        });
+
+        jlblLemonTea.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        jlblLemonTea.setText("Lemon Tea");
+        jlblLemonTea.setRolloverEnabled(false);
+        jlblLemonTea.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlblLemonTeaMouseClicked(evt);
+            }
+        });
+        jlblLemonTea.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jlblLemonTeaActionPerformed(evt);
+            }
+        });
+
+        jtxtTea.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtTea.setText("0");
+        jtxtTea.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtxtTeaActionPerformed(evt);
             }
         });
 
@@ -234,45 +357,53 @@ public class Cafe_Management_System extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jCheckBox1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jlblSoftDrink, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(62, 62, 62)
+                        .addComponent(jtxtSoftDrink, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox2)
-                            .addComponent(jCheckBox3))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jlblBananaShake, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(42, 42, 42)
+                        .addComponent(jtxtBananaShake, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jlblCoffee, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                        .addGap(86, 86, 86)
+                        .addComponent(jtxtCoffee, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jlblMilkShake, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(56, 56, 56)
+                        .addComponent(jtxtMilkShake, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jlblFruitJuice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(60, 60, 60)
+                        .addComponent(jtxtFruitJuice, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jCheckBox4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jlblCappuccino, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(58, 58, 58)
+                        .addComponent(jtxtCappuccino, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox13)
-                            .addComponent(jCheckBox16))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jlblLattle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(56, 56, 56))
+                            .addComponent(jlblIcedCappuccino, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(34, 34, 34)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jtxtLattle, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
+                            .addComponent(jtxtIcedCappuccino)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jlblIcedLattle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(64, 64, 64)
+                        .addComponent(jtxtIcedLattle, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField21, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jCheckBox14)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jCheckBox5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jCheckBox11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jCheckBox15)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jlblLemonTea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jlblTea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(40, 40, 40)))
+                        .addGap(62, 62, 62)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtxtLemonTea, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtxtTea, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -280,51 +411,56 @@ public class Cafe_Management_System extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlblCappuccino, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jtxtCappuccino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(2, 2, 2)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlblIcedCappuccino, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jtxtIcedCappuccino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox2)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jCheckBox3)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(5, 5, 5)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox4))
+                    .addComponent(jlblLattle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jtxtLattle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox5)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jlblIcedLattle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jtxtIcedLattle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlblCoffee, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jtxtCoffee, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(3, 3, 3)
+                        .addComponent(jlblTea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(5, 5, 5))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jCheckBox16)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 2, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jCheckBox13)
-                            .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jtxtTea, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jtxtLemonTea, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlblLemonTea, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jtxtSoftDrink, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlblSoftDrink, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox11)
-                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlblMilkShake, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jtxtMilkShake, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox14)
-                    .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlblBananaShake, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jtxtBananaShake, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox15)
-                    .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlblFruitJuice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jtxtFruitJuice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 260, 310));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 260, 350));
 
         Cafe_Management_System.setTitle("Cafe_Management_System");
         Cafe_Management_System.setName(""); // NOI18N
@@ -334,14 +470,14 @@ public class Cafe_Management_System extends javax.swing.JFrame {
         Cafe_Management_System.getContentPane().setLayout(Cafe_Management_SystemLayout);
         Cafe_Management_SystemLayout.setHorizontalGroup(
             Cafe_Management_SystemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 804, Short.MAX_VALUE)
+            .addGap(0, 814, Short.MAX_VALUE)
         );
         Cafe_Management_SystemLayout.setVerticalGroup(
             Cafe_Management_SystemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        getContentPane().add(Cafe_Management_System, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, 30));
+        getContentPane().add(Cafe_Management_System, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 30));
 
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
 
@@ -359,7 +495,7 @@ public class Cafe_Management_System extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jLabel2)
                 .addGap(80, 80, 80)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 428, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 438, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -373,76 +509,155 @@ public class Cafe_Management_System extends javax.swing.JFrame {
             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 820, 70));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 830, 70));
 
         jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.black, java.awt.Color.lightGray, java.awt.Color.red));
         jPanel3.setToolTipText("");
 
-        jCheckBox6.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
-        jCheckBox6.setText("Coffee Cake");
-
-        jCheckBox7.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
-        jCheckBox7.setText("Red Velvet Cake");
-
-        jCheckBox8.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
-        jCheckBox8.setText("Black Forest Cake");
-
-        jCheckBox9.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
-        jCheckBox9.setText("Butter Cake");
-
-        jCheckBox10.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
-        jCheckBox10.setText("Angel Food Cake");
-
-        jTextField13.addActionListener(new java.awt.event.ActionListener() {
+        jlblCoffeeCake.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        jlblCoffeeCake.setText("Coffee Cake");
+        jlblCoffeeCake.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlblCoffeeCakeMouseClicked(evt);
+            }
+        });
+        jlblCoffeeCake.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField13ActionPerformed(evt);
+                jlblCoffeeCakeActionPerformed(evt);
             }
         });
 
-        jTextField14.addActionListener(new java.awt.event.ActionListener() {
+        jlblRedVelvetCake.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        jlblRedVelvetCake.setText("Red Velvet Cake");
+        jlblRedVelvetCake.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlblRedVelvetCakeMouseClicked(evt);
+            }
+        });
+        jlblRedVelvetCake.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField14ActionPerformed(evt);
+                jlblRedVelvetCakeActionPerformed(evt);
             }
         });
 
-        jTextField15.addActionListener(new java.awt.event.ActionListener() {
+        jlblBlackForestCake.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        jlblBlackForestCake.setText("Black Forest Cake");
+        jlblBlackForestCake.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlblBlackForestCakeMouseClicked(evt);
+            }
+        });
+        jlblBlackForestCake.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField15ActionPerformed(evt);
+                jlblBlackForestCakeActionPerformed(evt);
             }
         });
 
-        jTextField16.addActionListener(new java.awt.event.ActionListener() {
+        jlblButterCake.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        jlblButterCake.setText("Butter Cake");
+        jlblButterCake.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlblButterCakeMouseClicked(evt);
+            }
+        });
+        jlblButterCake.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField16ActionPerformed(evt);
+                jlblButterCakeActionPerformed(evt);
             }
         });
 
-        jTextField17.addActionListener(new java.awt.event.ActionListener() {
+        jlblAngelFoodCake.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        jlblAngelFoodCake.setText("Angel Food Cake");
+        jlblAngelFoodCake.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlblAngelFoodCakeMouseClicked(evt);
+            }
+        });
+        jlblAngelFoodCake.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField17ActionPerformed(evt);
+                jlblAngelFoodCakeActionPerformed(evt);
             }
         });
 
-        jTextField18.addActionListener(new java.awt.event.ActionListener() {
+        jtxtRedVelvetCake.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtRedVelvetCake.setText("0");
+        jtxtRedVelvetCake.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField18ActionPerformed(evt);
+                jtxtRedVelvetCakeActionPerformed(evt);
             }
         });
 
-        jCheckBox12.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
-        jCheckBox12.setText("Hazelnut Mousse");
-
-        jCheckBox17.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
-        jCheckBox17.setText("Chiffon Cake");
-        jCheckBox17.addActionListener(new java.awt.event.ActionListener() {
+        jtxtCoffeeCake.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtCoffeeCake.setText("0");
+        jtxtCoffeeCake.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox17ActionPerformed(evt);
+                jtxtCoffeeCakeActionPerformed(evt);
             }
         });
 
-        jTextField23.addActionListener(new java.awt.event.ActionListener() {
+        jtxtBlackForestCake.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtBlackForestCake.setText("0");
+        jtxtBlackForestCake.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField23ActionPerformed(evt);
+                jtxtBlackForestCakeActionPerformed(evt);
+            }
+        });
+
+        jtxtChiffonCake.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtChiffonCake.setText("0");
+        jtxtChiffonCake.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtxtChiffonCakeActionPerformed(evt);
+            }
+        });
+
+        jtxtButterCake.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtButterCake.setText("0");
+        jtxtButterCake.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtxtButterCakeActionPerformed(evt);
+            }
+        });
+
+        jtxtAngelFoodCake.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtAngelFoodCake.setText("0");
+        jtxtAngelFoodCake.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtxtAngelFoodCakeActionPerformed(evt);
+            }
+        });
+
+        jlblHazelnutMousse.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        jlblHazelnutMousse.setText("Hazelnut Mousse");
+        jlblHazelnutMousse.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlblHazelnutMousseMouseClicked(evt);
+            }
+        });
+        jlblHazelnutMousse.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jlblHazelnutMousseActionPerformed(evt);
+            }
+        });
+
+        jlblChiffonCake.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
+        jlblChiffonCake.setText("Chiffon Cake");
+        jlblChiffonCake.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlblChiffonCakeMouseClicked(evt);
+            }
+        });
+        jlblChiffonCake.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jlblChiffonCakeActionPerformed(evt);
+            }
+        });
+
+        jtxtHazelnutMousse.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtHazelnutMousse.setText("0");
+        jtxtHazelnutMousse.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtxtHazelnutMousseActionPerformed(evt);
             }
         });
 
@@ -454,33 +669,37 @@ public class Cafe_Management_System extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jCheckBox7)
+                        .addComponent(jlblRedVelvetCake)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jtxtRedVelvetCake, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jCheckBox6)
+                        .addComponent(jlblCoffeeCake)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jtxtCoffeeCake, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jCheckBox8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
-                        .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jCheckBox9)
+                        .addComponent(jlblBlackForestCake)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jtxtBlackForestCake, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jCheckBox17)
+                        .addComponent(jlblButterCake)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jtxtButterCake, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jlblChiffonCake)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jtxtChiffonCake, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jCheckBox12, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox10))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jlblHazelnutMousse)
+                            .addComponent(jlblAngelFoodCake))
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField23, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jtxtAngelFoodCake, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(jtxtHazelnutMousse, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -488,43 +707,43 @@ public class Cafe_Management_System extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox6)
-                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlblCoffeeCake)
+                    .addComponent(jtxtCoffeeCake, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox7)
-                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlblRedVelvetCake)
+                    .addComponent(jtxtRedVelvetCake, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox8)
-                    .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlblBlackForestCake)
+                    .addComponent(jtxtBlackForestCake, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox9)
-                    .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlblButterCake)
+                    .addComponent(jtxtButterCake, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox10)
-                    .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlblAngelFoodCake)
+                    .addComponent(jtxtAngelFoodCake, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox17))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                    .addComponent(jtxtChiffonCake, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlblChiffonCake))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox12)
-                    .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                    .addComponent(jlblHazelnutMousse)
+                    .addComponent(jtxtHazelnutMousse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, 250, 310));
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, 250, 330));
 
         jPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.black, java.awt.Color.lightGray, java.awt.Color.red));
         jPanel4.setToolTipText("");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        jtxtReceipt.setColumns(20);
+        jtxtReceipt.setRows(5);
+        jScrollPane1.setViewportView(jtxtReceipt);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -532,55 +751,67 @@ public class Cafe_Management_System extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 266, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 364, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 120, 290, 380));
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 110, 300, 390));
 
         jPanel5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.black, java.awt.Color.lightGray, java.awt.Color.red));
         jPanel5.setToolTipText("");
 
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
-        jLabel4.setText("Cost of Drinks");
+        jlblCostofDrink.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
+        jlblCostofDrink.setText("Cost of Drinks");
 
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
-        jLabel5.setText("Cost of Cakes");
+        jlblCostofCake.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
+        jlblCostofCake.setText("Cost of Cakes");
 
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
-        jLabel6.setText("Service Charge");
+        jlblService.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
+        jlblService.setText("Service Charge");
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        jtxtCostofCakes.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jtxtCostofCakes.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtCostofCakes.setText("0");
+        jtxtCostofCakes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                jtxtCostofCakesActionPerformed(evt);
             }
         });
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        jtxtService.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jtxtService.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtService.setText("0");
+        jtxtService.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                jtxtServiceActionPerformed(evt);
             }
         });
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        jtxtCostofDrinks.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jtxtCostofDrinks.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtCostofDrinks.setText("0");
+        jtxtCostofDrinks.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                jtxtCostofDrinksActionPerformed(evt);
             }
         });
 
-        jLabel14.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
-        jLabel14.setText("GST No.");
+        jlblGST.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
+        jlblGST.setText("GST No.");
 
-        jTextField24.addActionListener(new java.awt.event.ActionListener() {
+        jtxtGST.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jtxtGST.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtGST.setText("TN045000775510");
+        jtxtGST.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField24ActionPerformed(evt);
+                jtxtGSTActionPerformed(evt);
             }
         });
 
@@ -592,69 +823,89 @@ public class Cafe_Management_System extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel4)
+                        .addComponent(jlblCostofDrink)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jtxtCostofDrinks, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel6)
+                        .addComponent(jlblService)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jtxtService, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel5)
+                        .addComponent(jlblCostofCake)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jtxtCostofCakes, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel14)
+                        .addComponent(jlblGST)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jtxtGST, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
-                .addGap(18, 18, 18)
+                    .addComponent(jtxtCostofDrinks, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlblCostofDrink))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jtxtCostofCakes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlblCostofCake))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                    .addComponent(jlblService)
+                    .addComponent(jtxtService, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel14)
-                    .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(13, 13, 13))
+                    .addComponent(jlblGST)
+                    .addComponent(jtxtGST, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 454, 240, 160));
+        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, 240, 150));
 
         jPanel6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.black, java.awt.Color.lightGray, java.awt.Color.red));
         jPanel6.setToolTipText("");
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
-        jButton1.setText("Total");
-
-        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
-        jButton2.setText("Receipt");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jBtnTotal.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
+        jBtnTotal.setText("Total");
+        jBtnTotal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jBtnTotalActionPerformed(evt);
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
-        jButton3.setText("Reset");
+        jBtnReceipt.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
+        jBtnReceipt.setText("Receipt");
+        jBtnReceipt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnReceiptActionPerformed(evt);
+            }
+        });
 
-        jButton4.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
-        jButton4.setText("Exit");
+        jBtnReset.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
+        jBtnReset.setText("Reset");
+        jBtnReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnResetActionPerformed(evt);
+            }
+        });
 
-        jButton5.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
-        jButton5.setText("Print Bil");
+        jBtnExit.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
+        jBtnExit.setText("Exit");
+        jBtnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnExitActionPerformed(evt);
+            }
+        });
+
+        jBtnPrint.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
+        jBtnPrint.setText("Print Bil");
+        jBtnPrint.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnPrintActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -664,65 +915,74 @@ public class Cafe_Management_System extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(jBtnTotal)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton3))
+                        .addComponent(jBtnReset))
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jButton2)
+                        .addComponent(jBtnReceipt)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton4)))
+                        .addComponent(jBtnExit)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton5)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jBtnPrint)
+                .addContainerGap(21, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                        .addGap(0, 12, Short.MAX_VALUE)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1)
-                            .addComponent(jButton3))
-                        .addGap(11, 11, 11)
+                            .addComponent(jBtnTotal)
+                            .addComponent(jBtnReset))
+                        .addGap(18, 18, 18)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton2)
-                            .addComponent(jButton4))))
+                            .addComponent(jBtnReceipt)
+                            .addComponent(jBtnExit)))
+                    .addComponent(jBtnPrint, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 510, 270, 90));
+        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 510, 280, 110));
 
         jPanel7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.black, java.awt.Color.lightGray, java.awt.Color.red));
         jPanel7.setToolTipText("");
 
-        jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
-        jLabel7.setText("Tax");
+        jlblTax.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
+        jlblTax.setText("Tax");
 
-        jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
-        jLabel8.setText("Sub Total");
+        jlblSubTotal.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
+        jlblSubTotal.setText("Sub Total");
 
-        jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
-        jLabel9.setText("Total");
+        jlblTotal.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
+        jlblTotal.setText("Total");
 
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        jtxtSubTotal.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jtxtSubTotal.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtSubTotal.setText("0");
+        jtxtSubTotal.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jtxtSubTotal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                jtxtSubTotalActionPerformed(evt);
             }
         });
 
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        jtxtTax.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jtxtTax.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtTax.setText("0");
+        jtxtTax.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                jtxtTaxActionPerformed(evt);
             }
         });
 
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        jtxtTotal.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jtxtTotal.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtTotal.setText("0");
+        jtxtTotal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                jtxtTotalActionPerformed(evt);
             }
         });
 
@@ -734,17 +994,17 @@ public class Cafe_Management_System extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(jLabel8)
+                        .addComponent(jlblSubTotal)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jtxtSubTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(jLabel9)
+                        .addComponent(jlblTotal)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jtxtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(jLabel7)
+                        .addComponent(jlblTax)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jtxtTax, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel7Layout.setVerticalGroup(
@@ -753,164 +1013,617 @@ public class Cafe_Management_System extends javax.swing.JFrame {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGap(21, 21, 21)
-                        .addComponent(jLabel7))
+                        .addComponent(jlblTax))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jtxtTax, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel8)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jlblSubTotal)
+                    .addComponent(jtxtSubTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlblTotal)
+                    .addComponent(jtxtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(16, 16, 16))
         );
 
-        getContentPane().add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 500, 260, 110));
+        getContentPane().add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 500, 260, 120));
 
         jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 11)); // NOI18N
         jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\owner\\Documents\\NetBeansProjects\\Cafe_Management_System\\img\\Papirus-Team-Papirus-Apps-Java.48.png")); // NOI18N
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 430, 50, 70));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 440, 50, 70));
 
         jLabel12.setFont(new java.awt.Font("Times New Roman", 1, 11)); // NOI18N
         jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\owner\\Documents\\NetBeansProjects\\Cafe_Management_System\\img\\icons8-cocktail-40.png")); // NOI18N
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 430, -1, 70));
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 440, -1, 70));
 
         jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\owner\\Documents\\NetBeansProjects\\Cafe_Management_System\\img\\icons8-popcorn-48.png")); // NOI18N
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 428, 70, 70));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 440, 70, 70));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jtxtCappuccinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtCappuccinoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jtxtCappuccinoActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void jtxtCostofCakesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtCostofCakesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_jtxtCostofCakesActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void jtxtServiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtServiceActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_jtxtServiceActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void jtxtCostofDrinksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtCostofDrinksActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_jtxtCostofDrinksActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void jtxtSubTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtSubTotalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_jtxtSubTotalActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void jtxtTaxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtTaxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_jtxtTaxActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void jtxtTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtTotalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_jtxtTotalActionPerformed
 
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+    private void jtxtLattleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtLattleActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
+    }//GEN-LAST:event_jtxtLattleActionPerformed
 
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+    private void jtxtIcedCappuccinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtIcedCappuccinoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
+    }//GEN-LAST:event_jtxtIcedCappuccinoActionPerformed
 
-    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
+    private void jtxtCoffeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtCoffeeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField10ActionPerformed
+    }//GEN-LAST:event_jtxtCoffeeActionPerformed
 
-    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
+    private void jtxtLemonTeaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtLemonTeaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField11ActionPerformed
+    }//GEN-LAST:event_jtxtLemonTeaActionPerformed
 
-    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
+    private void jtxtIcedLattleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtIcedLattleActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField12ActionPerformed
+    }//GEN-LAST:event_jtxtIcedLattleActionPerformed
 
-    private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
+    private void jtxtRedVelvetCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtRedVelvetCakeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField13ActionPerformed
+    }//GEN-LAST:event_jtxtRedVelvetCakeActionPerformed
 
-    private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
+    private void jtxtCoffeeCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtCoffeeCakeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField14ActionPerformed
+    }//GEN-LAST:event_jtxtCoffeeCakeActionPerformed
 
-    private void jTextField15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField15ActionPerformed
+    private void jtxtBlackForestCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtBlackForestCakeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField15ActionPerformed
+    }//GEN-LAST:event_jtxtBlackForestCakeActionPerformed
 
-    private void jTextField16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField16ActionPerformed
+    private void jtxtChiffonCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtChiffonCakeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField16ActionPerformed
+    }//GEN-LAST:event_jtxtChiffonCakeActionPerformed
 
-    private void jTextField17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField17ActionPerformed
+    private void jtxtButterCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtButterCakeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField17ActionPerformed
+    }//GEN-LAST:event_jtxtButterCakeActionPerformed
 
-    private void jTextField18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField18ActionPerformed
+    private void jtxtAngelFoodCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtAngelFoodCakeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField18ActionPerformed
+    }//GEN-LAST:event_jtxtAngelFoodCakeActionPerformed
 
-    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+    private void jlblIcedCappuccinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlblIcedCappuccinoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox2ActionPerformed
+    }//GEN-LAST:event_jlblIcedCappuccinoActionPerformed
 
-    private void jCheckBox11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox11ActionPerformed
+    private void jlblMilkShakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlblMilkShakeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox11ActionPerformed
+    }//GEN-LAST:event_jlblMilkShakeActionPerformed
 
-    private void jCheckBox13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox13ActionPerformed
+    private void jlblSoftDrinkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlblSoftDrinkActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox13ActionPerformed
+    }//GEN-LAST:event_jlblSoftDrinkActionPerformed
 
-    private void jCheckBox14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox14ActionPerformed
+    private void jlblBananaShakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlblBananaShakeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox14ActionPerformed
+    }//GEN-LAST:event_jlblBananaShakeActionPerformed
 
-    private void jCheckBox15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox15ActionPerformed
+    private void jlblFruitJuiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlblFruitJuiceActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox15ActionPerformed
+    }//GEN-LAST:event_jlblFruitJuiceActionPerformed
 
-    private void jCheckBox16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox16ActionPerformed
+    private void jlblCoffeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlblCoffeeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox16ActionPerformed
+    }//GEN-LAST:event_jlblCoffeeActionPerformed
 
-    private void jTextField19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField19ActionPerformed
+    private void jtxtMilkShakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtMilkShakeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField19ActionPerformed
+    }//GEN-LAST:event_jtxtMilkShakeActionPerformed
 
-    private void jTextField20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField20ActionPerformed
+    private void jtxtFruitJuiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtFruitJuiceActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField20ActionPerformed
+    }//GEN-LAST:event_jtxtFruitJuiceActionPerformed
 
-    private void jTextField21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField21ActionPerformed
+    private void jtxtSoftDrinkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtSoftDrinkActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField21ActionPerformed
+    }//GEN-LAST:event_jtxtSoftDrinkActionPerformed
 
-    private void jTextField22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField22ActionPerformed
+    private void jtxtBananaShakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtBananaShakeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField22ActionPerformed
+    }//GEN-LAST:event_jtxtBananaShakeActionPerformed
 
-    private void jTextField23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField23ActionPerformed
+    private void jtxtHazelnutMousseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtHazelnutMousseActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField23ActionPerformed
+    }//GEN-LAST:event_jtxtHazelnutMousseActionPerformed
 
-    private void jCheckBox17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox17ActionPerformed
+    private void jlblChiffonCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlblChiffonCakeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox17ActionPerformed
+    }//GEN-LAST:event_jlblChiffonCakeActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jBtnReceiptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnReceiptActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+        drink[0] = Double.parseDouble(jtxtCappuccino.getText());
+        drink[1] = Double.parseDouble(jtxtIcedCappuccino.getText());
+        drink[2] = Double.parseDouble(jtxtLattle.getText());
+        drink[3] = Double.parseDouble(jtxtIcedLattle.getText());
+        drink[4] = Double.parseDouble(jtxtCoffee.getText());
+        drink[5] = Double.parseDouble(jtxtTea.getText());
+        drink[6] = Double.parseDouble(jtxtLemonTea.getText());
+        drink[7] = Double.parseDouble(jtxtSoftDrink.getText());
+        drink[8] = Double.parseDouble(jtxtMilkShake.getText());
+        drink[9] = Double.parseDouble(jtxtBananaShake.getText());
+        drink[10] = Double.parseDouble(jtxtFruitJuice.getText());
+        
+        cake[0] = Double.parseDouble(jtxtCoffeeCake.getText());
+        cake[1] = Double.parseDouble(jtxtRedVelvetCake.getText());
+        cake[2] = Double.parseDouble(jtxtBlackForestCake.getText());
+        cake[3] = Double.parseDouble(jtxtButterCake.getText());
+        cake[4] = Double.parseDouble(jtxtAngelFoodCake.getText());
+        cake[5] = Double.parseDouble(jtxtChiffonCake.getText());
+        cake[6] = Double.parseDouble(jtxtHazelnutMousse.getText());
+        
+        cost[0] = jlblTax.getText();
+        cost[1] = jlblSubTotal.getText();
+        cost[2] = jlblTotal.getText();
+        //=======================================================
+        int refs = 1325 + (int)(Math.random() * 4238);
+        //int ref = (refs);
+        //=======================================================
+            Calendar timer = Calendar.getInstance();
+            timer.getTime();
+            SimpleDateFormat tTime = new SimpleDateFormat("HH:mm:ss");
+            tTime.format(timer.getTime());
+            SimpleDateFormat Tdate = new SimpleDateFormat("dd-MMM-yyyy");
+            Tdate.format(timer.getTime());
+        //========================================================
+        
+        
+        jtxtReceipt.setText("\t Cafe Management Systems:\n" +
+                "Reference:\t\t " + refs +
+                "\n================================\t" +
+                "\nCappuccino:\t\t " + drink[0] +
+                "\nIcedCappuccino:\t " + drink[1] +
+                "\nLattle:\t\t " + drink[2] +
+                "\nIcedLattle:\t\t " + drink[3] +
+                "\nCoffee:\t\t " + drink[4] +
+                "\nTea:\t\t " + drink[5] +
+                "\nLemonTea:\t\t " + drink[6] +
+                "\nSoftDrink:\t\t " + drink[7] +
+                "\nMilkShake:\t\t " + drink[8] +
+                "\nBananaShake:\t\t " + drink[9] +
+                "\nFruitJuice:\t\t " + drink[10] +
+                    "\n================================\t" +
+                    "\nCoffeCake:\t\t " + cake[0] +
+                    "\nRedVelvetCake:\t\t " + cake[1] +
+                    "\nBlackForestCake:\t\t " + cake[2] +
+                    "\nButterCake:\t\t " + cake[3] +
+                    "\nAngelFoodCake:\t\t " + cake[4] +
+                    "\nChiffonCake:\t\t " + cake[5] +
+                    "\nHazelnutMousse:\t " + cake[6] +
+                    "\n================================\t" +
+                    "\nTax:\t\t " + cost[0] +
+                    "\nSub Total:\t\t " + cost[1] +
+                    "\nTotal:\t\t " + cost[2] +
+                    "\n================================\t" +
+                    "\nDate: " + Tdate.format(timer.getTime()) +
+                    "\tTime: " + tTime.format(timer.getTime()) +
+                "\n\n\t Thank You \n");
+    }//GEN-LAST:event_jBtnReceiptActionPerformed
 
-    private void jTextField24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField24ActionPerformed
+    private void jtxtGSTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtGSTActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField24ActionPerformed
+    }//GEN-LAST:event_jtxtGSTActionPerformed
+
+    private void jBtnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnResetActionPerformed
+//        jlblCostofCake.setText(null);
+//        jlblCostofDrink.setText(null);
+//        jlblService.setText(null);
+//        jlblGST.setText(null);
+//        jlblTax.setText(null);
+//        jlblSubTotal.setText(null);
+//        jlblTotal.setText(null);
+        
+        jtxtCappuccino.setText("0");
+        jtxtIcedCappuccino.setText("0");
+        jtxtLattle.setText("0");
+        jtxtIcedLattle.setText("0");
+        jtxtCoffee.setText("0");
+        jtxtTea.setText("0");
+        jtxtLemonTea.setText("0");
+        jtxtSoftDrink.setText("0");
+        jtxtMilkShake.setText("0");
+        jtxtBananaShake.setText("0");
+        jtxtFruitJuice.setText("0");
+        jtxtCoffeeCake.setText("0");
+        jtxtRedVelvetCake.setText("0");
+        jtxtBlackForestCake.setText("0");
+        jtxtButterCake.setText("0");
+        jtxtAngelFoodCake.setText("0");
+        jtxtChiffonCake.setText("0");
+        jtxtHazelnutMousse.setText("0"); 
+        
+        jtxtReceipt.setText(null);
+        
+        jlblCappuccino.setSelected(false);
+        jlblIcedCappuccino.setSelected(false);
+        jlblLattle.setSelected(false);
+        jlblIcedLattle.setSelected(false);
+        jlblCoffee.setSelected(false);
+        jlblTea.setSelected(false);
+        jlblLemonTea.setSelected(false);
+        jlblSoftDrink.setSelected(false);
+        jlblMilkShake.setSelected(false);
+        jlblBananaShake.setSelected(false);
+        jlblFruitJuice.setSelected(false);
+        jlblCoffeeCake.setSelected(false);
+        jlblRedVelvetCake.setSelected(false);
+        jlblBlackForestCake.setSelected(false);
+        jlblButterCake.setSelected(false);
+        jlblAngelFoodCake.setSelected(false);
+        jlblChiffonCake.setSelected(false);
+        jlblHazelnutMousse.setSelected(false);
+    }//GEN-LAST:event_jBtnResetActionPerformed
+
+    private void jBtnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExitActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jBtnExitActionPerformed
+
+    private void jlblLemonTeaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlblLemonTeaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jlblLemonTeaActionPerformed
+
+    private void jtxtTeaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtTeaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtxtTeaActionPerformed
+
+    private void jlblCappuccinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlblCappuccinoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jlblCappuccinoActionPerformed
+
+    private void jBtnTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnTotalActionPerformed
+        // TODO add your handling code here:
+        drink[0] = Double.parseDouble(jlblCostofDrink.getText());
+        drink[1] = Double.parseDouble(jlblCostofCake.getText());
+        drink[2] = Double.parseDouble(jlblService.getText());
+        
+        double cTotal = (drink[0]+drink[1] + drink[2]);
+        
+        String iTaxTotal = String.format("₹ %.2f", cTotal / 100);
+        jlblTax.setText(iTaxTotal);
+        
+        double subTotal = cTotal;
+        String issubTotal = String.format("₹ %.2f", subTotal);
+        jlblSubTotal.setText(String.valueOf(subTotal));
+        
+        double allTotal = (cTotal);
+        String iTotal = String.format("₹ %.2f", allTotal + (allTotal / 100));
+        jlblTotal.setText(iTotal);
+        
+        String CostD = String.format("₹ %.2f", drink[0]);
+        jlblCostofDrink.setText(CostD);
+        
+        String CostC = String.format("₹ %.2f", drink[1]);
+        jlblCostofCake.setText(CostC);
+        
+        String Service = String.format("₹ %.2f", drink[2]);
+        jlblService.setText(Service);
+    }//GEN-LAST:event_jBtnTotalActionPerformed
+
+    private void jlblCoffeeCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlblCoffeeCakeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jlblCoffeeCakeActionPerformed
+
+    private void jBtnPrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPrintActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnPrintActionPerformed
+
+    private void jlblTeaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlblTeaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jlblTeaActionPerformed
+
+    private void jlblIcedLattleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlblIcedLattleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jlblIcedLattleActionPerformed
+
+    private void jlblCappuccinoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlblCappuccinoMouseClicked
+        double cCappuccino = Double.parseDouble(jlblCostofDrink.getText());
+        double Cappuccino = Double.parseDouble(jtxtCappuccino.getText());
+        double iCappuccino = 130.0;
+        
+        if(jlblCappuccino.isSelected())
+        {
+            i[0] = (Cappuccino + iCappuccino) + cCappuccino;
+            String pDrink = String.format("%.2f", i[1]);
+            jlblCostofDrink.setText(pDrink);
+            jtxtCappuccino.setText(pDrink);
+        }
+    }//GEN-LAST:event_jlblCappuccinoMouseClicked
+
+    private void jlblLattleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlblLattleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jlblLattleActionPerformed
+
+    private void jlblRedVelvetCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlblRedVelvetCakeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jlblRedVelvetCakeActionPerformed
+
+    private void jlblBlackForestCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlblBlackForestCakeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jlblBlackForestCakeActionPerformed
+
+    private void jlblButterCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlblButterCakeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jlblButterCakeActionPerformed
+
+    private void jlblAngelFoodCakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlblAngelFoodCakeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jlblAngelFoodCakeActionPerformed
+
+    private void jlblHazelnutMousseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlblHazelnutMousseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jlblHazelnutMousseActionPerformed
+
+    private void jlblIcedCappuccinoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlblIcedCappuccinoMouseClicked
+        double cIcedCappuccino = Double.parseDouble(jlblCostofDrink.getText());
+        double IcedCappuccino = Double.parseDouble(jtxtIcedCappuccino.getText());
+        double iIcedCappuccino = 120.0;
+        
+        if(jlblIcedCappuccino.isSelected())
+        {
+            i[0] = (IcedCappuccino + iIcedCappuccino) + cIcedCappuccino;
+            String pDrink = String.format("%.2f", i[1]);
+            jlblCostofDrink.setText(pDrink);
+            jtxtIcedCappuccino.setText(pDrink);
+        }
+    }//GEN-LAST:event_jlblIcedCappuccinoMouseClicked
+
+    private void jlblLattleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlblLattleMouseClicked
+        double cLattle = Double.parseDouble(jlblCostofDrink.getText());
+        double Lattle = Double.parseDouble(jtxtCappuccino.getText());
+        double iLattle = 60.0;
+        
+        if(jlblLattle.isSelected())
+        {
+            i[0] = (Lattle + iLattle) + cLattle;
+            String pDrink = String.format("%.2f", i[1]);
+            jlblCostofDrink.setText(pDrink);
+            jtxtLattle.setText(pDrink);
+        }
+    }//GEN-LAST:event_jlblLattleMouseClicked
+
+    private void jlblIcedLattleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlblIcedLattleMouseClicked
+        double cIcedLattle = Double.parseDouble(jlblCostofDrink.getText());
+        double IcedLattle = Double.parseDouble(jtxtIcedLattle.getText());
+        double iIcedLattle = 70.0;
+        
+        if(jlblIcedLattle.isSelected())
+        {
+            i[0] = (IcedLattle + iIcedLattle) + cIcedLattle;
+            String pDrink = String.format("%.2f", i[1]);
+            jlblCostofDrink.setText(pDrink);
+            jtxtIcedLattle.setText(pDrink);
+        }
+    }//GEN-LAST:event_jlblIcedLattleMouseClicked
+
+    private void jlblCoffeeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlblCoffeeMouseClicked
+        double cCoffee = Double.parseDouble(jlblCostofDrink.getText());
+        double Coffee = Double.parseDouble(jtxtCoffee.getText());
+        double iCoffee = 80.0;
+        
+        if(jlblCoffee.isSelected())
+        {
+            i[0] = (Coffee + iCoffee) + cCoffee;
+            String pDrink = String.format("%.2f", i[1]);
+            jlblCostofDrink.setText(pDrink);
+            jtxtCoffee.setText(pDrink);
+        }
+    }//GEN-LAST:event_jlblCoffeeMouseClicked
+
+    private void jlblTeaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlblTeaMouseClicked
+        double cTea = Double.parseDouble(jlblCostofDrink.getText());
+        double Tea = Double.parseDouble(jtxtTea.getText());
+        double iTea = 20.0;
+        
+        if(jlblTea.isSelected())
+        {
+            i[0] = (Tea + iTea) + cTea;
+            String pDrink = String.format("%.2f", i[1]);
+            jlblCostofDrink.setText(pDrink);
+            jtxtTea.setText(pDrink);
+        }
+    }//GEN-LAST:event_jlblTeaMouseClicked
+
+    private void jlblLemonTeaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlblLemonTeaMouseClicked
+        double cLemonTea = Double.parseDouble(jlblCostofDrink.getText());
+        double LemonTea = Double.parseDouble(jtxtLemonTea.getText());
+        double iLemonTea = 15.0;
+        
+        if(jlblLemonTea.isSelected())
+        {
+            i[0] = (LemonTea + iLemonTea) + cLemonTea;
+            String pDrink = String.format("%.2f", i[1]);
+            jlblCostofDrink.setText(pDrink);
+            jtxtLemonTea.setText(pDrink);
+        }
+    }//GEN-LAST:event_jlblLemonTeaMouseClicked
+
+    private void jlblSoftDrinkMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlblSoftDrinkMouseClicked
+        double cSoftDrink = Double.parseDouble(jlblCostofDrink.getText());
+        double SoftDrink = Double.parseDouble(jtxtSoftDrink.getText());
+        double iSoftDrink = 40.0;
+        
+        if(jlblSoftDrink.isSelected())
+        {
+            i[0] = (SoftDrink + iSoftDrink) + cSoftDrink;
+            String pDrink = String.format("%.2f", i[1]);
+            jlblCostofDrink.setText(pDrink);
+            jtxtSoftDrink.setText(pDrink);
+        }
+    }//GEN-LAST:event_jlblSoftDrinkMouseClicked
+
+    private void jlblMilkShakeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlblMilkShakeMouseClicked
+        double cMilkShake = Double.parseDouble(jlblCostofDrink.getText());
+        double MilkShake = Double.parseDouble(jtxtMilkShake.getText());
+        double iMilkShake = 80.0;
+        
+        if(jlblMilkShake.isSelected())
+        {
+            i[0] = (MilkShake + iMilkShake) + cMilkShake;
+            String pDrink = String.format("%.2f", i[1]);
+            jlblCostofDrink.setText(pDrink);
+            jtxtMilkShake.setText(pDrink);
+        }
+    }//GEN-LAST:event_jlblMilkShakeMouseClicked
+
+    private void jlblBananaShakeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlblBananaShakeMouseClicked
+        double cBananaShake = Double.parseDouble(jlblCostofDrink.getText());
+        double BananaShake = Double.parseDouble(jtxtBananaShake.getText());
+        double iBananaShake = 60.0;
+        
+        if(jlblBananaShake.isSelected())
+        {
+            i[0] = (BananaShake + iBananaShake) + cBananaShake;
+            String pDrink = String.format("%.2f", i[1]);
+            jlblCostofDrink.setText(pDrink);
+            jtxtBananaShake.setText(pDrink);
+        }
+    }//GEN-LAST:event_jlblBananaShakeMouseClicked
+
+    private void jlblFruitJuiceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlblFruitJuiceMouseClicked
+        double cFruitJuice = Double.parseDouble(jlblCostofDrink.getText());
+        double FruitJuice = Double.parseDouble(jtxtFruitJuice.getText());
+        double iFruitJuice = 90.0;
+        
+        if(jlblFruitJuice.isSelected())
+        {
+            i[0] = (FruitJuice + iFruitJuice) + cFruitJuice;
+            String pDrink = String.format("%.2f", i[1]);
+            jlblCostofDrink.setText(pDrink);
+            jtxtFruitJuice.setText(pDrink);
+        }
+    }//GEN-LAST:event_jlblFruitJuiceMouseClicked
+
+    private void jlblCoffeeCakeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlblCoffeeCakeMouseClicked
+        double cCoffeeCake = Double.parseDouble(jlblCostofCake.getText());
+        double CoffeeCake = Double.parseDouble(jtxtCoffeeCake.getText());
+        double iCoffeeCake = 400.0;
+        
+        if(jlblCoffeeCake.isSelected())
+        {
+            i[0] = (CoffeeCake + iCoffeeCake) + cCoffeeCake;
+            String pDrink = String.format("%.2f", i[1]);
+            jlblCostofCake.setText(pDrink);
+            jtxtCoffeeCake.setText(pDrink);
+        }
+    }//GEN-LAST:event_jlblCoffeeCakeMouseClicked
+
+    private void jlblRedVelvetCakeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlblRedVelvetCakeMouseClicked
+        double cRedVelvetCake = Double.parseDouble(jlblCostofCake.getText());
+        double RedVelvetCake = Double.parseDouble(jtxtRedVelvetCake.getText());
+        double iRedVelvetCake = 600.0;
+        
+        if(jlblRedVelvetCake.isSelected())
+        {
+            i[0] = (RedVelvetCake + iRedVelvetCake) + cRedVelvetCake;
+            String pDrink = String.format("%.2f", i[1]);
+            jlblCostofCake.setText(pDrink);
+            jtxtRedVelvetCake.setText(pDrink);
+        }
+    }//GEN-LAST:event_jlblRedVelvetCakeMouseClicked
+
+    private void jlblBlackForestCakeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlblBlackForestCakeMouseClicked
+        double cBlackForestCake = Double.parseDouble(jlblCostofCake.getText());
+        double BlackForestCake = Double.parseDouble(jtxtBlackForestCake.getText());
+        double iBlackForestCake = 800.0;
+        
+        if(jlblBlackForestCake.isSelected())
+        {
+            i[0] = (BlackForestCake + iBlackForestCake) + cBlackForestCake;
+            String pDrink = String.format("%.2f", i[1]);
+            jlblCostofCake.setText(pDrink);
+            jtxtBlackForestCake.setText(pDrink);
+        }
+    }//GEN-LAST:event_jlblBlackForestCakeMouseClicked
+
+    private void jlblButterCakeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlblButterCakeMouseClicked
+        double cButterCake = Double.parseDouble(jlblCostofCake.getText());
+        double ButterCake = Double.parseDouble(jtxtButterCake.getText());
+        double iButterCake = 350.0;
+        
+        if(jlblButterCake.isSelected())
+        {
+            i[0] = (ButterCake + iButterCake) + cButterCake;
+            String pDrink = String.format("%.2f", i[1]);
+            jlblCostofCake.setText(pDrink);
+            jtxtButterCake.setText(pDrink);
+        }
+    }//GEN-LAST:event_jlblButterCakeMouseClicked
+
+    private void jlblAngelFoodCakeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlblAngelFoodCakeMouseClicked
+        double cAngelFoodCake = Double.parseDouble(jlblCostofCake.getText());
+        double AngelFoodCake = Double.parseDouble(jtxtAngelFoodCake.getText());
+        double iAngelFoodCake = 400.0;
+        
+        if(jlblAngelFoodCake.isSelected())
+        {
+            i[0] = (AngelFoodCake + iAngelFoodCake) + cAngelFoodCake;
+            String pDrink = String.format("%.2f", i[1]);
+            jlblCostofCake.setText(pDrink);
+            jtxtAngelFoodCake.setText(pDrink);
+        }
+    }//GEN-LAST:event_jlblAngelFoodCakeMouseClicked
+
+    private void jlblChiffonCakeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlblChiffonCakeMouseClicked
+        double cChiffonCake = Double.parseDouble(jlblCostofCake.getText());
+        double ChiffonCake = Double.parseDouble(jtxtChiffonCake.getText());
+        double iChiffonCake = 500.0;
+        
+        if(jlblChiffonCake.isSelected())
+        {
+            i[0] = (ChiffonCake + iChiffonCake) + cChiffonCake;
+            String pDrink = String.format("%.2f", i[1]);
+            jlblCostofCake.setText(pDrink);
+            jtxtChiffonCake.setText(pDrink);
+        }
+    }//GEN-LAST:event_jlblChiffonCakeMouseClicked
+
+    private void jlblHazelnutMousseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlblHazelnutMousseMouseClicked
+        double cHazelnutMousse = Double.parseDouble(jlblCostofCake.getText());
+        double HazelnutMousse = Double.parseDouble(jtxtHazelnutMousse.getText());
+        double iHazelnutMousse = 900.0;
+        
+        if(jlblHazelnutMousse.isSelected())
+        {
+            i[0] = (HazelnutMousse + iHazelnutMousse) + cHazelnutMousse;
+            String pDrink = String.format("%.2f", i[1]);
+            jlblCostofCake.setText(pDrink);
+            jtxtHazelnutMousse.setText(pDrink);
+        }
+    }//GEN-LAST:event_jlblHazelnutMousseMouseClicked
 
     /**
      * @param args the command line arguments
@@ -949,41 +1662,17 @@ public class Cafe_Management_System extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JInternalFrame Cafe_Management_System;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox10;
-    private javax.swing.JCheckBox jCheckBox11;
-    private javax.swing.JCheckBox jCheckBox12;
-    private javax.swing.JCheckBox jCheckBox13;
-    private javax.swing.JCheckBox jCheckBox14;
-    private javax.swing.JCheckBox jCheckBox15;
-    private javax.swing.JCheckBox jCheckBox16;
-    private javax.swing.JCheckBox jCheckBox17;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox6;
-    private javax.swing.JCheckBox jCheckBox7;
-    private javax.swing.JCheckBox jCheckBox8;
-    private javax.swing.JCheckBox jCheckBox9;
+    private javax.swing.JButton jBtnExit;
+    private javax.swing.JButton jBtnPrint;
+    private javax.swing.JButton jBtnReceipt;
+    private javax.swing.JButton jBtnReset;
+    private javax.swing.JButton jBtnTotal;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -992,30 +1681,56 @@ public class Cafe_Management_System extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField20;
-    private javax.swing.JTextField jTextField21;
-    private javax.swing.JTextField jTextField22;
-    private javax.swing.JTextField jTextField23;
-    private javax.swing.JTextField jTextField24;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JCheckBox jlblAngelFoodCake;
+    private javax.swing.JCheckBox jlblBananaShake;
+    private javax.swing.JCheckBox jlblBlackForestCake;
+    private javax.swing.JCheckBox jlblButterCake;
+    private javax.swing.JCheckBox jlblCappuccino;
+    private javax.swing.JCheckBox jlblChiffonCake;
+    private javax.swing.JCheckBox jlblCoffee;
+    private javax.swing.JCheckBox jlblCoffeeCake;
+    private javax.swing.JLabel jlblCostofCake;
+    private javax.swing.JLabel jlblCostofDrink;
+    private javax.swing.JCheckBox jlblFruitJuice;
+    private javax.swing.JLabel jlblGST;
+    private javax.swing.JCheckBox jlblHazelnutMousse;
+    private javax.swing.JCheckBox jlblIcedCappuccino;
+    private javax.swing.JCheckBox jlblIcedLattle;
+    private javax.swing.JCheckBox jlblLattle;
+    private javax.swing.JCheckBox jlblLemonTea;
+    private javax.swing.JCheckBox jlblMilkShake;
+    private javax.swing.JCheckBox jlblRedVelvetCake;
+    private javax.swing.JLabel jlblService;
+    private javax.swing.JCheckBox jlblSoftDrink;
+    private javax.swing.JLabel jlblSubTotal;
+    private javax.swing.JLabel jlblTax;
+    private javax.swing.JCheckBox jlblTea;
+    private javax.swing.JLabel jlblTotal;
+    private javax.swing.JTextField jtxtAngelFoodCake;
+    private javax.swing.JTextField jtxtBananaShake;
+    private javax.swing.JTextField jtxtBlackForestCake;
+    private javax.swing.JTextField jtxtButterCake;
+    private javax.swing.JTextField jtxtCappuccino;
+    private javax.swing.JTextField jtxtChiffonCake;
+    private javax.swing.JTextField jtxtCoffee;
+    private javax.swing.JTextField jtxtCoffeeCake;
+    private javax.swing.JTextField jtxtCostofCakes;
+    private javax.swing.JTextField jtxtCostofDrinks;
+    private javax.swing.JTextField jtxtFruitJuice;
+    private javax.swing.JTextField jtxtGST;
+    private javax.swing.JTextField jtxtHazelnutMousse;
+    private javax.swing.JTextField jtxtIcedCappuccino;
+    private javax.swing.JTextField jtxtIcedLattle;
+    private javax.swing.JTextField jtxtLattle;
+    private javax.swing.JTextField jtxtLemonTea;
+    private javax.swing.JTextField jtxtMilkShake;
+    private javax.swing.JTextArea jtxtReceipt;
+    private javax.swing.JTextField jtxtRedVelvetCake;
+    private javax.swing.JTextField jtxtService;
+    private javax.swing.JTextField jtxtSoftDrink;
+    private javax.swing.JTextField jtxtSubTotal;
+    private javax.swing.JTextField jtxtTax;
+    private javax.swing.JTextField jtxtTea;
+    private javax.swing.JTextField jtxtTotal;
     // End of variables declaration//GEN-END:variables
 }
